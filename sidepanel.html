@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Onyx AI Agent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+
+  <!-- ====== SCREEN 1: WELCOME ====== -->
+  <div id="screen-welcome" class="screen active">
+    <div class="welcome-wrapper">
+      <div class="onyx-topbar">
+        <div class="onyx-logo-sm">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="#0096FF"/><path d="M2 17l10 5 10-5" stroke="#0096FF" stroke-width="1.5" fill="none"/><path d="M2 12l10 5 10-5" stroke="#0096FF" stroke-width="1.5" fill="none" opacity="0.6"/></svg>
+          <span>Onyx AI</span>
+        </div>
+        <span class="version-tag">V1.0.2</span>
+      </div>
+      <div class="welcome-hero">
+        <div class="hero-orb">
+          <div class="orb-glow"></div>
+          <div class="orb-core">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M12 2l2 4 4 2-4 2-2 4-2-4-4-2 4-2 2-4z" fill="#0096FF" opacity="0.8"/><path d="M18 10l1 2 2 1-2 1-1 2-1-2-2-1 2-1 1-2z" fill="#0096FF" opacity="0.5"/></svg>
+          </div>
+        </div>
+        <h1 class="welcome-title">Onyx AI Agent</h1>
+        <p class="welcome-subtitle">Experience the next evolution of autonomous intelligence. Precision crafted for the high-performance mind.</p>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card"><div class="feature-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" fill="#0096FF"/><path d="M12 2v4m0 12v4m10-10h-4M6 12H2m15.07-7.07l-2.83 2.83M9.76 14.24l-2.83 2.83m12.14 0l-2.83-2.83M9.76 9.76L6.93 6.93" stroke="#0096FF" stroke-width="1.5"/></svg></div><span class="feature-label">NEURAL CORE</span></div>
+        <div class="feature-card"><div class="feature-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="#0096FF" opacity="0.3" stroke="#0096FF" stroke-width="1.5"/></svg></div><span class="feature-label">PRIVATE VAULT</span></div>
+        <div class="feature-card"><div class="feature-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="#0096FF" opacity="0.3" stroke="#0096FF" stroke-width="1.5"/></svg></div><span class="feature-label">ULTRA LATENCY</span></div>
+        <div class="feature-card"><div class="feature-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2l2 4 4 2-4 2-2 4-2-4-4-2 4-2 2-4z" fill="#0096FF" opacity="0.5"/><circle cx="18" cy="6" r="2" fill="#0096FF" opacity="0.3"/><circle cx="6" cy="18" r="2" fill="#0096FF" opacity="0.3"/></svg></div><span class="feature-label">MULTI-AGENT</span></div>
+      </div>
+      <button class="btn-get-started" id="btn-get-started">Get Started <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7l7 7-7 7"/></svg></button>
+      <p class="powered-by">POWERED BY ONYX CORE ENGINE</p>
+    </div>
+  </div>
+
+  <!-- ====== SCREEN 2: AUTH ====== -->
+  <div id="screen-auth" class="screen">
+    <div class="auth-wrapper">
+      <div class="onyx-topbar">
+        <div class="onyx-logo-sm">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="#0096FF"/><path d="M2 17l10 5 10-5" stroke="#0096FF" stroke-width="1.5" fill="none"/><path d="M2 12l10 5 10-5" stroke="#0096FF" stroke-width="1.5" fill="none" opacity="0.6"/></svg>
+          <span>Onyx AI</span>
+        </div>
+        <div class="signal-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0096FF" stroke-width="2"><path d="M8.5 16.5a5 5 0 017 0"/><path d="M5 13a10 10 0 0114 0" opacity="0.5"/><circle cx="12" cy="20" r="1" fill="#0096FF"/></svg></div>
+      </div>
+      <div class="auth-header">
+        <span class="auth-label">— AUTHENTICATION</span>
+        <h1 class="auth-title">Initialize your<br><span class="accent-text">Onyx Core.</span></h1>
+        <p class="auth-desc">Connect your LLM provider to activate the engine. Your keys are encrypted and stored locally.</p>
+      </div>
+      <div class="security-badges">
+        <div class="badge-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="#0096FF" opacity="0.2" stroke="#0096FF" stroke-width="1.5"/><path d="M9 12l2 2 4-4" stroke="#0096FF" stroke-width="2"/></svg>
+          <div><strong>End-to-End Encryption</strong><small>AES-256 standard security</small></div>
+        </div>
+        <div class="badge-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="11" width="18" height="11" rx="2" stroke="#64748B" stroke-width="1.5"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="#64748B" stroke-width="1.5"/></svg>
+          <div><strong>Local-First Persistence</strong><small>No sensitive data leaves your device</small></div>
+        </div>
+      </div>
+      <div class="auth-form-card">
+        <div class="form-field">
+          <label class="field-label">PROVIDER</label>
+          <div class="select-wrapper">
+            <select id="auth-provider" class="onyx-select">
+              <option value="groq">GROQ (Ultra-fast)</option>
+              <option value="openrouter">OpenRouter (200+ models)</option>
+              <option value="gemini">Gemini (Free tier)</option>
+              <option value="custom">Self-Hosted / Local</option>
+            </select>
+            <svg class="select-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+        </div>
+        <div class="form-field">
+          <label class="field-label" id="auth-key-label">API KEY</label>
+          <div class="input-with-icon">
+            <input type="password" id="auth-apikey" class="onyx-input" placeholder="sk-..." autocomplete="off">
+            <button class="input-icon-btn" id="auth-toggle-key" title="Show/hide key"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>
+          </div>
+        </div>
+        <div class="form-field">
+          <label class="field-label">MODEL CONFIGURATION</label>
+          <div id="auth-model-area" class="model-chips-area">
+            <div class="loading-spinner-sm"><div class="spinner-sm"></div><span>Select provider & enter key first</span></div>
+          </div>
+        </div>
+      </div>
+      <button class="btn-connect" id="btn-connect-agent">Connect Agent <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7l7 7-7 7"/></svg></button>
+      <p class="auth-footer">By connecting, you agree to the Onyx Security Protocols.</p>
+      <div id="auth-error" class="auth-error-msg hidden"></div>
+    </div>
+  </div>
+
+  <!-- ====== SCREEN 3: CHAT ====== -->
+  <div id="screen-chat" class="screen">
+    <div class="chat-header">
+      <div class="header-left">
+        <div class="onyx-logo-sm">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="#0096FF"/><path d="M2 17l10 5 10-5" stroke="#0096FF" stroke-width="1.5" fill="none"/><path d="M2 12l10 5 10-5" stroke="#0096FF" stroke-width="1.5" fill="none" opacity="0.6"/></svg>
+          <span>Onyx AI</span>
+        </div>
+        <span class="header-model" id="header-model-name" style="display:none"></span>
+      </div>
+      <div class="header-right">
+        <button class="btn-icon-header" id="btn-new-chat" title="New Chat" aria-label="Start a new chat">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14m-7-7h14"/></svg>
+        </button>
+        <div class="signal-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0096FF" stroke-width="2"><path d="M8.5 16.5a5 5 0 017 0"/><path d="M5 13a10 10 0 0114 0" opacity="0.5"/><circle cx="12" cy="20" r="1" fill="#0096FF"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-messages" id="chat-messages" aria-live="polite" role="log">
+      <div class="chat-welcome" id="chat-welcome">
+        <h1 class="greeting-title"><span id="greeting-text">Good morning,</span><br><span class="accent-text">What's the play?</span></h1>
+        <p class="greeting-sub">Ready to assist with any task on this page.</p>
+        <div class="example-commands">
+          <button class="example-chip" data-cmd="Click the first link on this page">Click the first link</button>
+          <button class="example-chip" data-cmd="Search for 'AI news' in the search bar">Search for something</button>
+          <button class="example-chip" data-cmd="Scroll down and summarize the page content">Summarize page</button>
+          <button class="example-chip" data-cmd="Fill out the contact form with test data">Fill a form</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="status-bar hidden" id="status-bar" aria-live="polite" role="status">
+      <div class="status-indicator">
+        <div class="pulse-dot"></div>
+        <span id="status-text">Working...</span>
+      </div>
+      <button class="btn-stop" id="btn-stop-agent" aria-label="Stop agent">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/></svg>
+        Stop
+      </button>
+    </div>
+
+    <!-- HITL Permission Modal -->
+    <div class="permission-modal hidden" id="permission-modal">
+      <div class="permission-card">
+        <div class="permission-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="#FBBF24" opacity="0.2" stroke="#FBBF24" stroke-width="1.5"/><path d="M12 8v4m0 4h.01" stroke="#FBBF24" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h3 class="permission-title">Agent Requests Permission</h3>
+        <p class="permission-reason" id="permission-reason">The agent wants to perform a sensitive action.</p>
+        <p class="permission-planned" id="permission-planned"></p>
+        <div class="permission-actions">
+          <button class="btn-permission-reject" id="btn-permission-reject">Reject</button>
+          <button class="btn-permission-approve" id="btn-permission-approve">Approve</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-input-area">
+      <div class="input-wrapper">
+        <textarea id="chat-input" placeholder="Message Onyx..." rows="1" aria-label="Message Onyx"></textarea>
+        <button class="btn-send" id="btn-send" title="Send" aria-label="Send message">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 19V5m-7 7l7-7 7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="bottom-nav">
+      <button class="nav-item active" data-nav="chat">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="currentColor"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+        <span>AGENT</span>
+      </button>
+      <button class="nav-item" data-nav="macros">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        <span>MACROS</span>
+      </button>
+      <button class="nav-item" data-nav="history">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <span>HISTORY</span>
+      </button>
+      <button class="nav-item" data-nav="settings">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+        <span>SETTINGS</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ====== SCREEN: MACROS ====== -->
+  <div id="screen-macros" class="screen">
+    <div class="macros-wrapper">
+      <div class="onyx-topbar">
+        <div class="onyx-logo-sm">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="#0096FF"/><path d="M2 17l10 5 10-5" stroke="#0096FF" stroke-width="1.5" fill="none"/><path d="M2 12l10 5 10-5" stroke="#0096FF" stroke-width="1.5" fill="none" opacity="0.6"/></svg>
+          <span>Onyx AI</span>
+        </div>
+        <div class="signal-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0096FF" stroke-width="2"><path d="M8.5 16.5a5 5 0 017 0"/><path d="M5 13a10 10 0 0114 0" opacity="0.5"/><circle cx="12" cy="20" r="1" fill="#0096FF"/></svg></div>
+      </div>
+      <h1 class="macros-title">Macros</h1>
+      <p class="macros-desc">Saved workflow automations. Replay complex tasks instantly.</p>
+      <div id="macros-list" class="macros-list">
+        <div class="macros-empty">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--text-tertiary)" stroke-width="1"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          <p>No macros saved yet</p>
+          <small>Complete a task and ask Onyx to save it as a macro.</small>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-nav">
+      <button class="nav-item" data-nav="chat">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="currentColor"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+        <span>AGENT</span>
+      </button>
+      <button class="nav-item active" data-nav="macros">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        <span>MACROS</span>
+      </button>
+      <button class="nav-item" data-nav="history">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <span>HISTORY</span>
+      </button>
+      <button class="nav-item" data-nav="settings">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+        <span>SETTINGS</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ====== SCREEN 4: HISTORY ====== -->
+  <div id="screen-history" class="screen">
+    <div class="history-wrapper">
+      <div class="onyx-topbar">
+        <div class="onyx-logo-sm">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="#0096FF"/><path d="M2 17l10 5 10-5" stroke="#0096FF" stroke-width="1.5" fill="none"/><path d="M2 12l10 5 10-5" stroke="#0096FF" stroke-width="1.5" fill="none" opacity="0.6"/></svg>
+          <span>Onyx AI</span>
+        </div>
+        <div class="signal-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0096FF" stroke-width="2"><path d="M8.5 16.5a5 5 0 017 0"/><path d="M5 13a10 10 0 0114 0" opacity="0.5"/><circle cx="12" cy="20" r="1" fill="#0096FF"/></svg></div>
+      </div>
+      <h1 class="history-title">History</h1>
+      <p class="history-desc">Your recent conversations with Onyx.</p>
+      <div id="history-list" class="history-list">
+        <div class="history-empty">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--text-tertiary)" stroke-width="1"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <p>No conversations yet</p>
+          <small>Start chatting with Onyx to see your history here.</small>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-nav">
+      <button class="nav-item" data-nav="chat">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="currentColor"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+        <span>AGENT</span>
+      </button>
+      <button class="nav-item" data-nav="macros">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        <span>MACROS</span>
+      </button>
+      <button class="nav-item active" data-nav="history">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <span>HISTORY</span>
+      </button>
+      <button class="nav-item" data-nav="settings">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+        <span>SETTINGS</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ====== SCREEN 5: SETTINGS ====== -->
+  <div id="screen-settings" class="screen">
+    <div class="settings-wrapper">
+      <div class="onyx-topbar">
+        <div class="onyx-logo-sm">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="#0096FF"/><path d="M2 17l10 5 10-5" stroke="#0096FF" stroke-width="1.5" fill="none"/><path d="M2 12l10 5 10-5" stroke="#0096FF" stroke-width="1.5" fill="none" opacity="0.6"/></svg>
+          <span>Onyx AI</span>
+        </div>
+        <div class="signal-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0096FF" stroke-width="2"><path d="M8.5 16.5a5 5 0 017 0"/><path d="M5 13a10 10 0 0114 0" opacity="0.5"/><circle cx="12" cy="20" r="1" fill="#0096FF"/></svg></div>
+      </div>
+
+      <h1 class="settings-title">Settings</h1>
+      <p class="settings-desc">Manage your agent's cognition, identity, and security parameters.</p>
+
+      <!-- Cognition -->
+      <div class="settings-card">
+        <div class="card-header">
+          <div class="card-header-left"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#0096FF" stroke-width="1.5"/><path d="M12 6v6l4 2" stroke="#0096FF" stroke-width="1.5"/></svg><span>Cognition</span></div>
+          <span class="badge-active">ACTIVE</span>
+        </div>
+        <div class="card-body">
+          <div class="setting-row-item">
+            <div><div class="row-title">Model Provider</div></div>
+            <select id="setting-provider" class="onyx-select compact">
+              <option value="groq">GROQ</option>
+              <option value="openrouter">OpenRouter</option>
+              <option value="gemini">Gemini</option>
+              <option value="custom">Self-Hosted</option>
+            </select>
+          </div>
+          <div class="divider"></div>
+          <div class="setting-row-item">
+            <div><div class="row-title" id="setting-apikey-label">API Key</div></div>
+            <div class="input-with-icon" style="max-width:200px">
+              <input type="password" id="setting-apikey" class="onyx-input compact" placeholder="sk-...">
+              <button class="input-icon-btn" id="setting-toggle-key" title="Show/hide key" aria-label="Show or hide API key">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="setting-row-item">
+            <div><div class="row-title">Model</div></div>
+            <div class="model-select-row">
+              <select id="setting-model" class="onyx-select compact"><option value="">Select a model</option></select>
+              <button class="btn-icon-sm" id="btn-refresh-models" title="Refresh models" aria-label="Refresh models"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 4v6h6M23 20v-6h-6"/><path d="M20.49 9A9 9 0 005.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 013.51 15"/></svg></button>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="setting-row-item">
+            <div><div class="row-title">Max Steps</div><div class="row-value">Maximum actions per task</div></div>
+            <input type="number" id="setting-max-steps" class="onyx-input compact num-input" value="15" min="5" max="50">
+          </div>
+        </div>
+      </div>
+
+      <!-- Security -->
+      <div class="settings-card">
+        <div class="card-header">
+          <div class="card-header-left"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="5" y="11" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M8 11V7a4 4 0 018 0v4" stroke="currentColor" stroke-width="1.5"/></svg><span>Security</span></div>
+        </div>
+        <div class="card-body">
+          <div class="safety-options">
+            <label class="radio-option">
+              <input type="radio" name="safety" value="relaxed" checked>
+              <span class="radio-label"><strong>Relaxed</strong><small>Auto-execute safe actions, confirm sensitive ones</small></span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="safety" value="moderate">
+              <span class="radio-label"><strong>Moderate</strong><small>Show toast for each action, auto-execute after 2s</small></span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="safety" value="strict">
+              <span class="radio-label"><strong>Strict</strong><small>Manual approval for every action</small></span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chat History -->
+      <div class="settings-card">
+        <div class="card-header">
+          <div class="card-header-left"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Chat History</span></div>
+          <label class="toggle-switch">
+            <input type="checkbox" id="setting-chat-history" checked>
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+        <div class="card-body">
+          <div class="setting-row-item">
+            <div><div class="row-title">Retention Period</div><div class="row-value">Auto-delete old conversations</div></div>
+            <select id="setting-retention" class="onyx-select compact">
+              <option value="1">1 day</option>
+              <option value="3">3 days</option>
+              <option value="5" selected>5 days</option>
+              <option value="7">7 days</option>
+              <option value="30">30 days</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="settings-actions">
+        <button class="btn-save-settings" id="btn-save-settings">Save Changes</button>
+        <button class="btn-secondary" id="btn-clear-memory">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l2 4 4 2-4 2-2 4-2-4-4-2 4-2 2-4z"/><circle cx="18" cy="6" r="2"/></svg>
+          Clear Agent Memory
+          <small>Remove cross-session browsing context (500 entries max).</small>
+        </button>
+        <button class="btn-reset" id="btn-reset-extension">
+          Reset Agent Matrix
+          <small>Permanently wipe all learned behaviors and short-term memory.</small>
+        </button>
+      </div>
+    </div>
+    <div class="bottom-nav">
+      <button class="nav-item" data-nav="chat">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="currentColor"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+        <span>AGENT</span>
+      </button>
+      <button class="nav-item" data-nav="macros">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        <span>MACROS</span>
+      </button>
+      <button class="nav-item" data-nav="history">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <span>HISTORY</span>
+      </button>
+      <button class="nav-item active" data-nav="settings">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+        <span>SETTINGS</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>
