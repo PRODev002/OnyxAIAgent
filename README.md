@@ -42,7 +42,7 @@
 
 1. **Clone the Repo:**
    ```bash
-   git clone https://github.com/your-username/OnyxAIAgent.git
+   git clone https://github.com/PRODev002/OnyxAIAgent.git
    ```
 
 2. **Load in Chrome:**
